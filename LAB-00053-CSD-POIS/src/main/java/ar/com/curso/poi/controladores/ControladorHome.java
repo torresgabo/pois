@@ -9,6 +9,6 @@ public class ControladorHome {
 	@GET
 	@Path("/test")
 	public String hola(){
-		return "Test OK!";
+		return "Test OK! Not OK!";
 	}
 }

@@ -1,0 +1,19 @@
+2017-07-26 10:17:19.824:INFO:oejs.Server:jetty-7.6.17.v20150415
+2017-07-26 10:17:19.844:INFO:oejdp.ScanningAppProvider:Deployment monitor C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\webapps at interval 1
+2017-07-26 10:17:19.851:INFO:oejd.DeploymentManager:Deployable added: C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\webapps\cargocpc.war
+2017-07-26 10:17:19.897:INFO:oejw.WebInfConfiguration:Extract jar:file:/C:/workspace/LAB-00053-CSD-POIS/target/cargo/configurations/jetty7x/webapps/cargocpc.war!/ to C:\Users\Administrador.000\AppData\Local\Temp\jetty-0.0.0.0-8080-cargocpc.war-_cargocpc-any-\webapp
+2017-07-26 10:17:20.192:INFO:oejsh.ContextHandler:started o.e.j.w.WebAppContext{/cargocpc,file:/C:/Users/Administrador.000/AppData/Local/Temp/jetty-0.0.0.0-8080-cargocpc.war-_cargocpc-any-/webapp/},C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\webapps\cargocpc.war
+2017-07-26 10:17:20.233:INFO:oejdp.ScanningAppProvider:Deployment monitor C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\contexts at interval 1
+2017-07-26 10:17:20.235:INFO:oejd.DeploymentManager:Deployable added: C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\contexts\pois-app.xml
+2017-07-26 10:17:20.266:INFO:oejw.WebInfConfiguration:Extract jar:file:/C:/workspace/LAB-00053-CSD-POIS/target/pois-app.war!/ to C:\workspace\LAB-00053-CSD-POIS\target\pois-app
+jul 26, 2017 10:17:21 AM org.jboss.resteasy.spi.ResteasyDeployment 
+INFORMACIÓN: Adding scanned resource: ar.com.curso.poi.controladores.ControladorHome
+2017-07-26 10:17:21.723:INFO:oejsh.ContextHandler:started o.e.j.w.WebAppContext{/pois-app,file:/C:/workspace/LAB-00053-CSD-POIS/target/pois-app/},C:\workspace\LAB-00053-CSD-POIS\target\pois-app.war
+2017-07-26 10:17:21.913:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:8080
+2017-07-26 10:17:25.537:INFO:oejs.Server:Graceful shutdown SelectChannelConnector@0.0.0.0:8080
+2017-07-26 10:17:25.537:INFO:oejs.Server:Graceful shutdown o.e.j.w.WebAppContext{/cargocpc,file:/C:/Users/Administrador.000/AppData/Local/Temp/jetty-0.0.0.0-8080-cargocpc.war-_cargocpc-any-/webapp/},C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\webapps\cargocpc.war
+2017-07-26 10:17:25.538:INFO:oejs.Server:Graceful shutdown o.e.j.w.WebAppContext{/pois-app,file:/C:/workspace/LAB-00053-CSD-POIS/target/pois-app/},C:\workspace\LAB-00053-CSD-POIS\target\pois-app.war
+2017-07-26 10:17:26.594:INFO:oejsl.ELContextCleaner:javax.el.BeanELResolver purged
+2017-07-26 10:17:26.595:INFO:oejsh.ContextHandler:stopped o.e.j.w.WebAppContext{/pois-app,file:/C:/workspace/LAB-00053-CSD-POIS/target/pois-app/},C:\workspace\LAB-00053-CSD-POIS\target\pois-app.war
+2017-07-26 10:17:26.600:INFO:oejsl.ELContextCleaner:javax.el.BeanELResolver purged
+2017-07-26 10:17:26.600:INFO:oejsh.ContextHandler:stopped o.e.j.w.WebAppContext{/cargocpc,file:/C:/Users/Administrador.000/AppData/Local/Temp/jetty-0.0.0.0-8080-cargocpc.war-_cargocpc-any-/webapp/},C:\workspace\LAB-00053-CSD-POIS\target\cargo\configurations\jetty7x\webapps\cargocpc.war

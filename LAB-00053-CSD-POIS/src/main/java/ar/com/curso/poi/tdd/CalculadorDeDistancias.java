@@ -1,6 +1,6 @@
 package ar.com.curso.poi.tdd;
 
-public class Utilidades {
+public class CalculadorDeDistancias {
 
 	public static double distanciaCoord(double lat1, double lng1, double lat2, double lng2) {
 		// double radioTierra = 3958.75;//en millas
@@ -19,10 +19,6 @@ public class Utilidades {
 //		var distancia = google.maps.geometry.spherical.computeDistanceBetween(x1, x2);
 		
 		return distancia;
-	}
-	
-	public static void main(String args[]){
-		System.out.println(Utilidades.distanciaCoord(lat1, lng1, lat2, lng2));
 	}
 
 }

@@ -6,7 +6,7 @@ import javax.ws.rs.PathParam;
 import com.google.gson.Gson;
 
 import ar.com.curso.poi.tdd.PoiBean;
-import ar.com.curso.poi.tdd.Utilidades;
+import ar.com.curso.poi.tdd.CalculadorDeDistancias;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -54,7 +54,7 @@ public class ControladorHome {
 		double longitud =Double.parseDouble(lon);;
 		
 		for (int i=0; i<obj.size(); i++){
-			obj.get(i).setDistancia(Utilidades.distanciaCoord(latitud, longitud, Double.parseDouble(obj.get(i).getLatitud()), Double.parseDouble(obj.get(i).getLongitud())));
+			obj.get(i).setDistancia(CalculadorDeDistancias.distanciaCoord(latitud, longitud, Double.parseDouble(obj.get(i).getLatitud()), Double.parseDouble(obj.get(i).getLongitud())));
 			
 		}
 		Collections.sort(obj,new Comparator<PoiBean>() {

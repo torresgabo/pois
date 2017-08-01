@@ -18,7 +18,7 @@ public class CalculadorDeDistancias {
 //		var x2=new google.maps.LatLng(50.997698,-16.41788);
 //		var distancia = google.maps.geometry.spherical.computeDistanceBetween(x1, x2);
 		
-		return distancia;
+		return distancia *1000;
 	}
 
 }

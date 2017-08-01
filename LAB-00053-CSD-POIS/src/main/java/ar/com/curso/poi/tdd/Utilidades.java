@@ -1,8 +1,8 @@
 package ar.com.curso.poi.tdd;
 
-public class CalculadorDeDistancias {
+public class Utilidades {
 
-	public double distanciaCoord(double lat1, double lng1, double lat2, double lng2) {
+	public static double distanciaCoord(double lat1, double lng1, double lat2, double lng2) {
 		// double radioTierra = 3958.75;//en millas
 		double radioTierra = 6371;// en kilómetros
 		double dLat = Math.toRadians(lat2 - lat1);
@@ -14,7 +14,15 @@ public class CalculadorDeDistancias {
 		double va2 = 2 * Math.atan2(Math.sqrt(va1), Math.sqrt(1 - va1));
 		double distancia = radioTierra * va2;
 
-		return distancia*1000;
+//		var x1=new google.maps.LatLng(50.995093,-16.417091);
+//		var x2=new google.maps.LatLng(50.997698,-16.41788);
+//		var distancia = google.maps.geometry.spherical.computeDistanceBetween(x1, x2);
+		
+		return distancia;
+	}
+	
+	public static void main(String args[]){
+		System.out.println(Utilidades.distanciaCoord(lat1, lng1, lat2, lng2));
 	}
 
 }

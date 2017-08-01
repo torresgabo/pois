@@ -20,5 +20,9 @@ public class Utilidades {
 		
 		return distancia;
 	}
+	
+	public static void main(String args[]){
+		System.out.println(Utilidades.distanciaCoord(lat1, lng1, lat2, lng2));
+	}
 
 }

@@ -12,7 +12,6 @@ public class PoiBean {
 	private String latitud;
 	private String nombre;
 	private String descripcion;
-	private double distancia;
 
 	public PoiBean() {
 
@@ -49,22 +48,13 @@ public class PoiBean {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-
-	public double getDistancia() {
-		return distancia;
-	}
-
-	public void setDistancia(double distancia) {
-		this.distancia = distancia;
-	}
 
 	public List<PoiBean> getPois() {
 
 		List<PoiBean> pois = new ArrayList();
 
 		PoiBean item = new PoiBean();
-		// long latitud
+		// long        latitud
 		// -27.7815141,-64.2645084 Pizzería "Las Cuartetas"
 		// -34.5978366,-58.3876505 El Cuartito
 		// -34.6033254,-58.3795288 El Palacio de la Pizza

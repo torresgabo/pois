@@ -26,7 +26,6 @@ public class ControladorHome {
 		
 		List<PoiBean> obj = new PoiBean().getPois();
 		Gson gson = new Gson();
-		
 		String json = gson.toJson(obj); 
 		return json;
 	}

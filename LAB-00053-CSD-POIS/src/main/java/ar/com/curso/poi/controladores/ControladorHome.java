@@ -8,10 +8,6 @@ import com.google.gson.Gson;
 import ar.com.curso.poi.tdd.PoiBean;
 import ar.com.curso.poi.tdd.CalculadorDeDistancias;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import javax.ws.rs.GET;
@@ -50,22 +46,6 @@ public class ControladorHome {
 	public String retornapoicercano(@PathParam("servicio") String servicio, @PathParam("latitud") String lat, @PathParam("longitud") String lon ){
 		
 		List<PoiBean> obj = new PoiBean().getPois();
-		double  latitud = Double.parseDouble(lat);
-		double longitud =Double.parseDouble(lon);;
-		
-		for (int i=0; i<obj.size(); i++){
-			obj.get(i).setDistancia(CalculadorDeDistancias.distanciaCoord(latitud, longitud, Double.parseDouble(obj.get(i).getLatitud()), Double.parseDouble(obj.get(i).getLongitud())));
-			
-		}
-		Collections.sort(obj,new Comparator<PoiBean>() {
-
-			public int compare(PoiBean o1, PoiBean o2) {
-				return Integer.parseInt(""+o2.getDistancia())-Integer.parseInt(""+o1.getDistancia());
-			}
-			
-		});
-		
-		
 		Gson gson = new Gson();
 		
 		if (validaServicio(servicio)){

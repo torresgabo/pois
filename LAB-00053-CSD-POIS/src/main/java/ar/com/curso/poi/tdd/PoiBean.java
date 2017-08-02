@@ -121,5 +121,16 @@ public class PoiBean {
 
 		return pois;
 	}
+	
+	public static List<PoiBean> filtraPois(String servicio){
+		List<PoiBean> listaPois = new PoiBean().getPois();
+		for (int i=0;i<listaPois.size();i++){
+			if(!listaPois.get(i).getServicio().equals(servicio)){
+				listaPois.remove(i);
+				i--;
+			}
+		}
+		return listaPois;
+	}
 
 }

@@ -14,28 +14,30 @@ import ar.com.curso.poi.tdd.PoiBean;
 
 public class ServicioTestATDD {
 	ControladorHome controlador = new ControladorHome();
+
 	@Test
-	public void validaElPoiMasCercano(){
-		//Obelisco
-		//lon -34.6037389
-		//lat -58.3837644
-		String url = "htto://localhost:8080/pois-api/Buenos_Aires_Turismo/-34.6037389/-58.3837644";
+	public void validaElPoiMasCercano() {
+		// Obelisco
+		// lon -34.6037389
+		// lat -58.3837644
 		try {
-			String data=llamarUrl(url);
+			String url = "http://localhost:8080/pois-app/Buenos_Aires_Turismo/retornapoicercano/-34.6037389/-58.3837644";
+
+			String data = llamarUrl(url);
+
+			assertThat(data).contains("Cuartetas");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		assertThat(controlador.validaServicio("Argentina")).isFalse();
 	}
-	
-	public String llamarUrl(String url) throws Exception{
 
-        URL urlConnect = new URL(url);
-        URLConnection connection = urlConnect.openConnection();
-        DataInputStream inStream = new DataInputStream(connection.getInputStream());
-        return inStream.readLine();
-	} 
-	
-	
+	public String llamarUrl(String url) throws Exception {
+
+		URL urlConnect = new URL(url);
+		URLConnection connection = urlConnect.openConnection();
+		DataInputStream inStream = new DataInputStream(connection.getInputStream());
+		return inStream.readLine();
+	}
+
 }

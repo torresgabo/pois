@@ -12,6 +12,7 @@ public class PoiBean {
 	private String latitud;
 	private String nombre;
 	private String descripcion;
+	private String servicio;
 	private double distancia;
 
 	public PoiBean() {
@@ -58,6 +59,16 @@ public class PoiBean {
 	public void setDistancia(double distancia) {
 		this.distancia = distancia;
 	}
+	
+	
+
+	public String getServicio() {
+		return servicio;
+	}
+
+	public void setServicio(String servicio) {
+		this.servicio = servicio;
+	}
 
 	public List<PoiBean> getPois() {
 
@@ -74,6 +85,7 @@ public class PoiBean {
 		item.latitud = "-64.2645084";
 		item.longitud = "-27.7815141";
 		item.nombre = "Pizzería 'Las Cuartetas'";
+		item.servicio = "Buenos_Aires_Turismo";
 
 		pois.add(item);
 
@@ -83,6 +95,7 @@ public class PoiBean {
 		item.latitud = "-58.3876505";
 		item.longitud = "-34.5978366";
 		item.nombre = "El Cuartito";
+		item.servicio = "Buenos_Aires_Turismo";
 
 		pois.add(item);
 
@@ -92,15 +105,17 @@ public class PoiBean {
 		item.latitud = "-58.3795288";
 		item.longitud = "-34.6033254";
 		item.nombre = "El Palacio de la Pizza";
+		item.servicio = "Buenos_Aires_Turismo";
 
 		pois.add(item);
 
 		item = new PoiBean();
 
 		item.descripcion = "Cabildo de Buenos Aires";
-		item.latitud = "-34.6088526";
-		item.longitud = "-58.3759733";
+		item.latitud = "-58.3759733";
+		item.longitud = "-34.6088526";
 		item.nombre = "Cabildo de Buenos Aires";
+		item.servicio = "Buenos_Aires_Turismo";
 
 		pois.add(item);
 

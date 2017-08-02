@@ -43,13 +43,32 @@ public class ControladorHome {
 	
 	@GET
 	@Path("/{servicio}/retornapoicercano/{latitud}/{longitud}")
-	public String retornapoicercano(@PathParam("servicio") String servicio, @PathParam("latitud") String lat, @PathParam("longitud") String lon ){
+	public String retornapoicercano(@PathParam("servicio") String servicio, @PathParam("longitud") String lon ,@PathParam("latitud") String lat){
 		
 		List<PoiBean> obj = new PoiBean().getPois();
+<<<<<<< Updated upstream
+=======
+		Double  latitud = Double.parseDouble(lat);
+		Double longitud =Double.parseDouble(lon);;
+		
+		for (int i=0; i<obj.size(); i++){
+			obj.get(i).setDistancia(CalculadorDeDistancias.distanciaCoord(latitud, longitud, Double.parseDouble(obj.get(i).getLatitud()), Double.parseDouble(obj.get(i).getLongitud())));
+			
+		}
+		Collections.sort(obj,new Comparator<PoiBean>() {
+
+			public int compare(PoiBean o1, PoiBean o2) {
+				return (int) (o1.getDistancia()-o2.getDistancia());
+			}
+			
+		});
+		
+		
+>>>>>>> Stashed changes
 		Gson gson = new Gson();
 		
 		if (validaServicio(servicio)){
-			String json = gson.toJson(obj); 
+			String json = gson.toJson(obj.get(0)); 
 			return json;
 		}else{
 			Mensaje mensaje = new Mensaje();

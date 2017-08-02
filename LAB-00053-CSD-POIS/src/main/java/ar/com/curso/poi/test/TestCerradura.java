@@ -1,6 +1,8 @@
-package ar.com.curso.poi.kata.tdd;
+package ar.com.curso.poi.test;
 import static org.assertj.core.api.Assertions.*;
 import org.junit.Test;
+
+import ar.com.curso.poi.kata.tdd.Cerradura;
 public class TestCerradura {
 	Cerradura cerradura = new Cerradura(1234, 3);
 	

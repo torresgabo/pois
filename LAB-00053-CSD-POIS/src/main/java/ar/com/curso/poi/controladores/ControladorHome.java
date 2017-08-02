@@ -26,11 +26,10 @@ public class ControladorHome {
 	@GET
 	@Path("/{servicio}/retoranpois")
 	public String retoranpois(@PathParam("servicio") String servicio){
-		List<PoiBean> obj = new PoiBean().getPois();
 		Gson gson = new Gson();
 		
-		
 		if (validaServicio(servicio)){
+			List<PoiBean> obj = PoiBean.filtraPois(servicio);
 			String json = gson.toJson(obj); 
 			return json;
 		}else{
@@ -47,7 +46,7 @@ public class ControladorHome {
 	@Path("/{servicio}/retornapoicercano/{latitud}/{longitud}")
 	public String retornapoicercano(@PathParam("servicio") String servicio, @PathParam("longitud") String lon ,@PathParam("latitud") String lat){
 		
-		List<PoiBean> obj = new PoiBean().getPois();
+		List<PoiBean> obj = PoiBean.filtraPois(servicio);
 		Double  latitud = Double.parseDouble(lat);
 		Double longitud =Double.parseDouble(lon);;
 		
@@ -67,7 +66,7 @@ public class ControladorHome {
 		Gson gson = new Gson();
 		
 		if (validaServicio(servicio)){
-			String json = gson.toJson(obj.get(0)); 
+			String json = gson.toJson(obj.isEmpty() ? obj:obj.get(0)); 
 			return json;
 		}else{
 			Mensaje mensaje = new Mensaje();

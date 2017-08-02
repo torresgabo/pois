@@ -46,7 +46,7 @@ public class ControladorHome {
 	@Path("/{servicio}/retornapoicercano/{latitud}/{longitud}")
 	public String retornapoicercano(@PathParam("servicio") String servicio, @PathParam("longitud") String lon ,@PathParam("latitud") String lat){
 		
-		List<PoiBean> obj = PoiBean.filtraPois(servicio);
+		List<PoiBean> obj = new PoiBean().getPois();
 		Double  latitud = Double.parseDouble(lat);
 		Double longitud =Double.parseDouble(lon);;
 		

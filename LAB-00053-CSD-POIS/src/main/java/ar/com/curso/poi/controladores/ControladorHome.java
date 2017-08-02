@@ -43,7 +43,7 @@ public class ControladorHome {
 	}
 	
 	@GET
-	@Path("/{servicio}/retornapoicercano/{latitud}/{longitud}")
+	@Path("/{servicio}/retornapoicercano/{longitud}/{latitud}")
 	public String retornapoicercano(@PathParam("servicio") String servicio, @PathParam("longitud") String lon ,@PathParam("latitud") String lat){
 		
 		List<PoiBean> obj = new PoiBean().getPois();

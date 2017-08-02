@@ -81,7 +81,6 @@ public class PoiBean {
 		//		-34.6041472,-58.3771743 El Palacio de la Pizza 
 		//		-34.6088526,-58.3759679 Cabildo de Buenos Aires
 
-
 		item.descripcion = "Pizzería 'Las Cuartetas'";
 		item.latitud = "-58.3795235";
 		item.longitud = "-34.6033254";
